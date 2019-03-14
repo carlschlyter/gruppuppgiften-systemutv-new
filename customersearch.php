@@ -14,6 +14,8 @@ $dsn = "mysql:host=$host;
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(),(int)$e->getCode());
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +41,10 @@ if (isset($_GET['customer'])) {
     $stmt = $pdo->query("SELECT * FROM customers WHERE customerNumber = $customerNumber");
 
     if ($row = $stmt->fetch()) {
-        print_r($row);
+//        print_r($row);
         echo "<br>" . "<br>" .$row['customerNumber'] . " - " . $row['customerName'] . " - " .  $row['country'] .  "<br>";
     } else {
-        echo 'Det finns ingen kund med det numret.';
+        echo 'Det finns ingen kund med det numret.' . '<br>';
     }
  } else {
      echo 'Ingen kund vald.' . '<br>';
@@ -54,5 +56,9 @@ $customerNumber = '242';
 <br>
 <a href="customers.php"><strong><i>Kunder Startsida</i></strong></a>
 
+<?php
+
+
+?>
 </body>
 </html>
