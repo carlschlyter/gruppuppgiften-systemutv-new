@@ -17,7 +17,6 @@ try {
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,21 +28,17 @@ try {
 <body>
 
 <h1>Kunder</h1>
+<p><i>(20 första)<br>Kundnamn - Kundnummer - Land</i></p>
 <?php
 $stmt = $pdo->query("SELECT * FROM customers order by customerName limit 20");
     
     while ($row = $stmt->fetch())
 {
-    echo $row['customerNumber'] . " - " . $row['customerName'] . " - " .  $row['country'] .  "<br>";
+    echo $row['customerName'] . " - " .  $row['customerNumber'] . " - " . $row['country'] .  "<br>";
 }    
 ?>
 <br>
 <a href="customersearch2.php"><strong><i>Sök kunder</i></strong></a>
-
-<!-- <form action="customersearch.php" method="get">
-        <input type="text" name="customer">
-        <input type="submit" value="Search">   
-</form> -->
 
 </body>
 </html>
