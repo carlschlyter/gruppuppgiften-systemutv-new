@@ -11,10 +11,10 @@ $dsn = "mysql:host=$host;
 
  try {
     $pdo = new PDO($dsn, $user, $pass);
+//    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ); // from 2
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(),(int)$e->getCode());
 }
-
 
 ?>
 
@@ -36,13 +36,15 @@ $dsn = "mysql:host=$host;
 <br>
 <?php
 if (isset($_GET['customer'])) {
-    $customerNumber = filter_input(INPUT_GET, 'customer', FILTER_SANITIZE_STRING);    
+    $search = filter_input(INPUT_GET, 'customer', FILTER_SANITIZE_STRING);    
 
-    $stmt = $pdo->query("SELECT * FROM customers WHERE customerNumber = $customerNumber");
+//    $search = '%' . $_GET['customer'] . '%';
+    $stmt = $pdo->prepare("SELECT * FROM customers WHERE customerNumber = $search");
+    $stmt->execute([$search]);
 
     if ($row = $stmt->fetch()) {
 //        print_r($row);
-        echo "<br>" . "<br>" .$row['customerNumber'] . " - " . $row['customerName'] . " - " .  $row['country'] .  "<br>";
+        echo "<br>" . "<br>" . $row['customerNumber'] . " - " . $row['customerName'] . " - " .  $row['country'] .  "<br>";
     } else {
         echo 'Det finns ingen kund med det numret.' . '<br>';
     }
@@ -50,7 +52,7 @@ if (isset($_GET['customer'])) {
      echo 'Ingen kund vald.' . '<br>';
 }
 
-$customerNumber = '242';  
+//$customerNumber = '242';  
 
 ?>
 <br>

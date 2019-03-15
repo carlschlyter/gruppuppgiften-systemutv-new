@@ -38,7 +38,7 @@ $stmt = $pdo->query("SELECT * FROM customers order by customerName limit 20");
 }    
 ?>
 <br>
-<a href="customersearch.php"><strong><i>Sök kunder</i></strong></a>
+<a href="customersearch2.php"><strong><i>Sök kunder</i></strong></a>
 
 <!-- <form action="customersearch.php" method="get">
         <input type="text" name="customer">
