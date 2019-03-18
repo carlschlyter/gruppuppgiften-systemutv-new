@@ -28,9 +28,9 @@ try {
 <body>
 
 <h1>Kunder</h1>
-<p><i>(20 första)<br>Kundnamn - Kundnummer - Land</i></p>
+<p><i>(De 20 senast inlagda)<br>Kundnamn - Kundnummer - Land</i></p>
 <?php
-$stmt = $pdo->query("SELECT * FROM customers order by customerName limit 20");
+$stmt = $pdo->query("SELECT * FROM customers order by customerNumber DESC LIMIT 20");
     
     while ($row = $stmt->fetch())
 {
