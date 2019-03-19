@@ -32,10 +32,12 @@ $dsn = "mysql:host=$host;
 
 <h1>Sök kunder</h1>
 <p><i>Sök hela eller delar av namnet på kund</i></p>
+
 <form action="customersearch2.php" method="GET">
         <input type="text" name="customer">
         <input type="submit" value="Search">   
 </form>
+
 <p><i>Kundnamn - Kundnummer - Land</i></p>
 <?php
 if(isset($_GET['customer'])){
