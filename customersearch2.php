@@ -60,9 +60,7 @@ if(isset($_GET['customer'])){
    }
 
 ?>
-<br>
-<a href="customers.php"><strong><i>Kunder Startsida</i></strong></a><br>
-<a href="customeradmin.php"><strong><i>Administrera kunder</i></strong></a>
+<?php include 'custincl/customernavbar.php';?>
 </body>
 </html>
 

@@ -29,12 +29,6 @@ $dsn = "mysql:host=$host;
 <body>
 
 <h1>Administrera kunder</h1>
-
-<a href="newcustomer.php"><strong><i>Skapa ny kund</i></strong></a><br>
-<a href="customers.php"><strong><i>Ta bort kund</i></strong></a><br> 
-<a href="customers.php"><strong><i>Ändra kund</i></strong></a><br>
-<a href="customersearch2.php"><strong><i>Sök kund</i></strong></a><br>
-<a href="customers.php"><strong><i>Kunder startsida</i></strong></a>   
-
+<?php include 'custincl/customernavbar.php';?>
 </body>
 </html>

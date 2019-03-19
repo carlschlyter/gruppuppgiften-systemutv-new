@@ -37,9 +37,7 @@ $stmt = $pdo->query("SELECT * FROM customers order by customerNumber DESC LIMIT 
     echo $row['customerName'] . " - " .  $row['customerNumber'] . " - " . $row['country'] .  "<br>";
 }    
 ?>
-<br>
-<a href="customersearch2.php"><strong><i>Sök kunder</i></strong></a>
-
+<?php include 'custincl/customernavbar.php';?>
 </body>
 </html>
 

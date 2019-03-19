@@ -93,10 +93,6 @@ echo 'customer added';
         <input type="text" name="creditLimit"><caption><i> Kundkredit</i></caption><br><br>
         <input type="submit" name="Skicka" value="Skapa kund">   
 </form>
-<br>
-<a href="customeradmin.php"><strong><i>Administrera Kunder</i></strong></a><br>
-<a href="customersearch2.php"><strong><i>Sök kund</i></strong></a><br>
-<a href="customers.php"><strong><i>Kunder startsida</i></strong></a>   
-
+<?php include 'custincl/customernavbar.php';?>
 </body>
 </html>
