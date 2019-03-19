@@ -89,7 +89,7 @@ echo 'customer added';
         <input type="text" name="state"><caption><i> Stat</i></caption><br>
         <input type="text" name="postalCode"><caption><i> Postnummer</i></caption><br>
         <input type="text" name="country"><caption><i> Land</i></caption><br>
-        <input type="text" name="salesRepEmployeeNumber"><caption><i> Anst. nr försäljningsrepresentant</i></caption><br>
+        <input type="text" name="salesRepEmployeeNumber"><caption><i> Anst. nr. försäljningsrepresentant</i></caption><br>
         <input type="text" name="creditLimit"><caption><i> Kundkredit</i></caption><br><br>
         <input type="submit" name="Skicka" value="Skapa kund">   
 </form>
