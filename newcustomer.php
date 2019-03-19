@@ -65,6 +65,8 @@ echo 'customer added';
 
 ?>
 
+<?php include 'incl/header.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

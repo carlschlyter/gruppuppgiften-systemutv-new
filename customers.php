@@ -14,11 +14,10 @@ try {
 } catch (\PDOException $e) {
      throw new \PDOException($e->getMessage(),(int)$e->getCode());
 }
-
 ?>
 
-
 <?php include 'incl/header.php';?>
+
 <h1>Kunder</h1>
 <p><i>(De 20 senast inlagda)<br>Kundnamn - Kundnummer - Land</i></p>
 <?php

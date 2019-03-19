@@ -15,8 +15,9 @@ $dsn = "mysql:host=$host;
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(),(int)$e->getCode());
 }
-
 ?>
+
+<?php include 'incl/header.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
