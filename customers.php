@@ -17,16 +17,8 @@ try {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
 
+<?php include 'incl/header.php';?>
 <h1>Kunder</h1>
 <p><i>(De 20 senast inlagda)<br>Kundnamn - Kundnummer - Land</i></p>
 <?php
@@ -37,7 +29,7 @@ $stmt = $pdo->query("SELECT * FROM customers order by customerNumber DESC LIMIT 
     echo $row['customerName'] . " - " .  $row['customerNumber'] . " - " . $row['country'] .  "<br>";
 }    
 ?>
-<?php include 'custincl/customernavbar.php';?>
+<?php include 'incl/customernavbar.php';?>
 </body>
 </html>
 

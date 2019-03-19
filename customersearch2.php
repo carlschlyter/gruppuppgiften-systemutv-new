@@ -60,7 +60,7 @@ if(isset($_GET['customer'])){
    }
 
 ?>
-<?php include 'custincl/customernavbar.php';?>
+<?php include 'incl/customernavbar.php';?>
 </body>
 </html>
 

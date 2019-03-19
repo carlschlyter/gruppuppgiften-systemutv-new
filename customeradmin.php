@@ -29,6 +29,6 @@ $dsn = "mysql:host=$host;
 <body>
 
 <h1>Administrera kunder</h1>
-<?php include 'custincl/customernavbar.php';?>
+<?php include 'incl/customernavbar.php';?>
 </body>
 </html>

@@ -11,7 +11,7 @@ $dsn = "mysql:host=$host;
 
  try {
     $pdo = new PDO($dsn, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(),(int)$e->getCode());
 }
@@ -93,6 +93,6 @@ echo 'customer added';
         <input type="text" name="creditLimit"><caption><i> Kundkredit</i></caption><br><br>
         <input type="submit" name="Skicka" value="Skapa kund">   
 </form>
-<?php include 'custincl/customernavbar.php';?>
+<?php include 'incl/customernavbar.php';?>
 </body>
 </html>
