@@ -21,7 +21,7 @@
             <a href="LoginPage.php" class="TopBtn" Id="LogInBtn">Logga In</a>
             <a href="RegisterPage.php" class="TopBtn" Id="RegisterBtn">Registrera</a>
             <a href="ProductPage.php" class="TopBtn" Id="ProductsBtn">Produkter</a>
-            <a href="KassaPage.php" class="TopBtn" Id="KassaBtn">Kassa</a>
+            <a href="customers.php" class="TopBtn" Id="KassaBtn">Kunder</a>
             <a href="OrderPage.php" class="TopBtn" Id="KassaBtn">Ordrar</a>
         </nav>
 </div>
