@@ -1,0 +1,85 @@
+html, body {   
+    width: 100%;   
+   height: 100%;   
+   font-family: "Times New Roman", Helvetica, sans-serif;   
+   color: rgb(17, 15, 15);   
+       background: #ffffff;
+       box-sizing: content-box;
+       margin: 0px;
+       background-image: url(http://www.portoalegre.travel/upload/b/123/1238647_wallpaper-login.jpg);
+   }
+   
+
+   #container {
+
+    width: 480px;
+    height: 315px;
+    background-color: rgb(241, 241, 241);
+    padding: 20px;
+    position: absolute;
+    right: 470px;
+    top: 180px;
+    border: 3px  dashed rgb(141, 147, 179); 
+    
+   }
+
+   a {
+    text-decoration: none;
+  }
+
+   input[type=submit] {
+
+    float: right;
+    width: 120px;
+    background-color: rgb(53, 86, 148);
+    color: rgb(238, 238, 237);
+    height: 30px;
+    font-weight: bold;
+    
+   }
+
+   input[type=submit]:hover {
+
+    background-color: rgb(141, 139, 139);
+    color: rgb(255, 255, 255);
+
+   }
+   
+  /* to align checkbox and radio lables */
+
+   input[type=checkbox], input[type=radio] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+}
+
+input[type=checkbox], input[type=radio] {
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+}
+
+
+   #rights {
+
+    letter-spacing: 1px;
+    width: 454px;
+    line-height: 2.5em;
+    margin-left: -20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, rgb(10, 52, 110) , rgb(89, 179, 253));
+
+   }
+
+   #orderhistory  {
+height: 50px;
+width: 525px;
+text-align: center;
+line-height: 2.4em;
+position: fixed;
+right:471px;
+top:130px;
+background-color: #595959;
+color: white;
+   }
