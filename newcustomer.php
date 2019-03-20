@@ -31,12 +31,12 @@ if (isset($_POST['Skicka'])) {
     $state = filter_input(INPUT_POST, 'state', FILTER_SANITIZE_STRING);
     $postalCode = filter_input(INPUT_POST, 'postalCode', FILTER_SANITIZE_STRING);
     $country = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_STRING);
-    $salesRepEmployeeNumber = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_NUMBER_INT);
-    $creditLimit = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_NUMBER_INT);
+    $salesRepEmployeeNumber = filter_input(INPUT_POST, 'salesRepEmployeeNumber', FILTER_SANITIZE_NUMBER_INT);
+    $creditLimit = filter_input(INPUT_POST, 'creditLimit', FILTER_SANITIZE_NUMBER_INT);
 
    
     $sql = "INSERT INTO customers(customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2, city, state, postalCode, country, salesRepEmployeeNumber, creditLimit) VALUES('$customerNumber', '$customerName', '$contactLastName', '$contactFirstName', '$phone', '$addressLine1', '$addressLine2', '$city', '$state', '$postalCode', '$country', '$salesRepEmployeeNumber', '$creditLimit')";
-    //echo $sql . '<br>'; (Mickes grej för att kolla varför inte formuläret fungerade)
+    echo $sql . '<br>'; //(Mickes grej för att kolla varför inte formuläret fungerade)
     $stmt =$pdo->prepare($sql); 
     $stmt->execute();
 }
